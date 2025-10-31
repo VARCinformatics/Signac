@@ -1,0 +1,364 @@
+-----------------------------------------------------------------------------------------------------
+Warning: Lmod is not configured. The default ACCRE software stack will be loaded automatically.
+
+Tip: To avoid this warning in the future, run the command:
+      setup_accre_software_stack
+
+For convenience, consider adding the following line to your .bashrc file:
+      setup_accre_software_stack
+
+For more details, please visit the documentation at:
+      https://help.accre.vanderbilt.edu/index.php?title=Software_Stack
+-----------------------------------------------------------------------------------------------------
+Loading required package: SeuratObject
+Loading required package: sp
+
+Attaching package: ‘SeuratObject’
+
+The following objects are masked from ‘package:base’:
+
+    intersect, t
+
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: generics
+
+Attaching package: ‘generics’
+
+The following objects are masked from ‘package:base’:
+
+    as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
+    setequal, union
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,
+    unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:sp’:
+
+    %over%
+
+Loading required package: GenomeInfoDb
+Loading required package: Rcpp
+
+Attaching package: ‘hdf5r’
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    values
+
+The following object is masked from ‘package:S4Vectors’:
+
+    values
+
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:Biostrings’:
+
+    collapse, intersect, setdiff, setequal, union
+
+The following object is masked from ‘package:XVector’:
+
+    slice
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, setequal, union
+
+The following object is masked from ‘package:generics’:
+
+    explain
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:XVector’:
+
+    compact
+
+The following object is masked from ‘package:hdf5r’:
+
+    flatten_df
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    reduce
+
+The following object is masked from ‘package:IRanges’:
+
+    reduce
+
+The following object is masked from ‘package:Signac’:
+
+    reduce
+
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following object is masked from ‘package:dplyr’:
+
+    count
+
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘SummarizedExperiment’
+
+The following object is masked from ‘package:Seurat’:
+
+    Assays
+
+The following object is masked from ‘package:SeuratObject’:
+
+    Assays
+
+[1] ‘5.3.0’
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+
+Attaching package: ‘glmGamPoi’
+
+The following object is masked from ‘package:dplyr’:
+
+    vars
+
+The following object is masked from ‘package:ggplot2’:
+
+    vars
+
+[1] ‘0.3.1’
+[1] ‘1.0.0’
+[1] ‘1.20.0’
+[1] ‘1.15.0’
+Normalizing layer: counts
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Finding variable features for layer counts
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |===                                                                   |   4%  |                                                                              |======                                                                |   8%  |                                                                              |========                                                              |  12%  |                                                                              |===========                                                           |  16%  |                                                                              |==============                                                        |  20%  |                                                                              |=================                                                     |  24%  |                                                                              |====================                                                  |  28%  |                                                                              |======================                                                |  32%  |                                                                              |=========================                                             |  36%  |                                                                              |============================                                          |  40%  |                                                                              |===============================                                       |  44%  |                                                                              |==================================                                    |  48%  |                                                                              |====================================                                  |  52%  |                                                                              |=======================================                               |  56%  |                                                                              |==========================================                            |  60%  |                                                                              |=============================================                         |  64%  |                                                                              |================================================                      |  68%  |                                                                              |==================================================                    |  72%  |                                                                              |=====================================================                 |  76%  |                                                                              |========================================================              |  80%  |                                                                              |===========================================================           |  84%  |                                                                              |==============================================================        |  88%  |                                                                              |================================================================      |  92%  |                                                                              |===================================================================   |  96%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  ST18, DPYD, MBP, PLP1, RNF220, TMEM144, CTNNA3, ENPP2, MOBP, PIP4K2A 
+	   PLD1, TF, MAN2A1, CLDN11, SLC7A14-AS1, PLCL1, FAM107B, SLCO1A2, LINC01608, LPAR1 
+	   GLDN, PALM2AKAP2, HHIP, CERCAM, MYO1D, ANLN, CNP, PRUNE2, UGT8, CNDP1 
+Negative:  FAM155A, NRXN1, NRG3, PLCB1, NRCAM, GPM6A, SLC35F1, CTNNA2, SOX5, NEBL 
+	   SOX6, FGF14, PTPRZ1, RBMS3, RGS7, GRIK2, OPCML, SNTG1, CHL1, PARD3 
+	   NKAIN3, KCND2, THRB, GABRB1, PCDH7, FGF12, CSMD1, KCNMB2, DGKG, MAP2 
+PC_ 2 
+Positive:  SLC1A3, ARHGAP24, NEAT1, ARHGAP26, CARMIL1, GLIS3, BMPR1B, GPC5, NHSL1, OBI1-AS1 
+	   BMP2K, RYR3, TPD52L1, MERTK, APOE, AQP4, LINC00299, TRPM3, GJA1, RFX4 
+	   RANBP3L, STON2, RGS20, ATP1A2, ABR, SLCO1C1, GLI3, ACSS3, ZNF98, PAMR1 
+Negative:  NRXN3, SLC24A2, ROBO1, CNTNAP2, KAZN, PEX5L, CSMD1, TTLL7, MDGA2, GALNT13 
+	   PDE1C, OPCML, SH3GL3, ADARB2, SNTG1, CSMD3, FGF12, GRIK2, FGF14, KCNH8 
+	   DPP6, XKR4, RIMS2, KIRREL3, GRM5, ATRNL1, CNTNAP5, CNTNAP4, GRID2, DAB1 
+PC_ 3 
+Positive:  GPC5, RYR3, BMPR1B, TMTC2, OBI1-AS1, ERBB4, TPD52L1, LINC00299, AQP4, TRPM3 
+	   RFX4, SLC1A2, LRIG1, RANBP3L, RGS20, ZNF98, ATP1A2, GJA1, SLCO1C1, RORB 
+	   GLI3, PAMR1, SHROOM3, GNA14, DLC1, ZNRF3, ACSS3, COL5A3, LINC00499, ACSBG1 
+Negative:  DOCK8, APBB1IP, SLC8A1, ST6GAL1, FYB1, ADAM28, LRMDA, ATP8B4, ARHGAP15, FRMD4A 
+	   TBXAS1, SRGAP2, SLCO2B1, INPP5D, RUNX1, SRGAP2B, DENND3, MEF2C, DIAPH2, RNASET2 
+	   CSF1R, LNCAROD, SYK, PALD1, DOCK2, DISC1, TLR2, IPCEF1, RHBDF2, HS3ST4 
+PC_ 4 
+Positive:  CA10, VCAN, TNR, PTPRZ1, XYLT1, MEGF11, PDGFRA, LHFPL3, SMOC1, BRINP3 
+	   LUZP2, SEMA5A, MMP16, DSCAM, CHST11, LINC00511, PCDH15, STK32A, COL11A1, DGKG 
+	   LRRC4C, MYT1, FERMT1, MIR3681HG, CHST9, OPHN1, PLPP4, BCAN, DISC1, NTNG1 
+Negative:  CLDN5, ABCB1, COBLL1, ADGRL2, VWF, MECOM, ATP10A, ERG, ITGA1, ADGRL4 
+	   PTPRB, EGFL7, THSD4, ST8SIA6, PDE10A, ADGRF5, DCLK1, PODXL, MTUS2, LEF1 
+	   ROBO2, RUNDC3B, PIK3R3, ARHGAP29, GALNT18, IFI27, NOSTRIN, SLCO4A1, ANO2, ZNF385B 
+PC_ 5 
+Positive:  CLDN5, ABCB1, VWF, MECOM, ANO2, ATP10A, ERG, EPAS1, COBLL1, PODXL 
+	   NOSTRIN, ADGRF5, ADGRL4, IFI27, LEF1, EGFL7, ST8SIA6, PDZD2, CAVIN2, TEK 
+	   SLC1A1, ZFPM2, SLCO4A1, CA10, THSD4, CDH5, SYNE2, KLF2, SLC2A1, PALMD 
+Negative:  TENM2, ROBO2, FRMPD4, KCNC2, CHRM3, MGAT4C, SYNPR, CACNA1B, MTUS2, GRIP1 
+	   EPHA6, HCN1, FRMD4A, TENM3, CDH9, FSTL5, GABRG3, CNTNAP2, GABRB2, DLGAP2 
+	   KCNQ5, SYT1, GABBR2, GALNTL6, SNHG14, PCLO, CELF4, KCNQ3, LINGO2, ELAVL2 
+Running CCA
+Merging objects
+Finding neighborhoods
+Finding anchors
+	Found 37314 anchors
+Warning messages:
+1: The `slot` argument of `SetAssayData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+2: The `slot` argument of `GetAssayData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+Finding integration vectors
+Finding integration vector weights
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Predicting cell labels
+Warning message:
+`aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+Warning messages:
+1: ggrepel: 10 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+2: ggrepel: 6 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning message:
+ggrepel: 9 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning message:
+ggrepel: 4 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning messages:
+1: ggrepel: 11 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+2: ggrepel: 6 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning messages:
+1: The `slot` argument of `FetchData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+2: `PackageCheck()` was deprecated in SeuratObject 5.0.0.
+ℹ Please use `rlang::check_installed()` instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+3: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+4: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+Warning messages:
+1: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+2: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
