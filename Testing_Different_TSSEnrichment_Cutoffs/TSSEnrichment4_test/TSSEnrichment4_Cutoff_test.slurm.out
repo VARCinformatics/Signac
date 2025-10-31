@@ -1,0 +1,1043 @@
+-----------------------------------------------------------------------------------------------------
+Warning: Lmod is not configured. The default ACCRE software stack will be loaded automatically.
+
+Tip: To avoid this warning in the future, run the command:
+      setup_accre_software_stack
+
+For convenience, consider adding the following line to your .bashrc file:
+      setup_accre_software_stack
+
+For more details, please visit the documentation at:
+      https://help.accre.vanderbilt.edu/index.php?title=Software_Stack
+-----------------------------------------------------------------------------------------------------
+Loading required package: SeuratObject
+Loading required package: sp
+
+Attaching package: ‘SeuratObject’
+
+The following objects are masked from ‘package:base’:
+
+    intersect, t
+
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: generics
+
+Attaching package: ‘generics’
+
+The following objects are masked from ‘package:base’:
+
+    as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
+    setequal, union
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,
+    unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:sp’:
+
+    %over%
+
+Loading required package: GenomeInfoDb
+Loading required package: Rcpp
+
+Attaching package: ‘hdf5r’
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    values
+
+The following object is masked from ‘package:S4Vectors’:
+
+    values
+
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Warning messages:
+1: The `slot` argument of `FetchData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+2: `PackageCheck()` was deprecated in SeuratObject 5.0.0.
+ℹ Please use `rlang::check_installed()` instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+3: `aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+Performing TF-IDF normalization
+Warning message:
+In RunTFIDF.default(object = GetAssayData(object = object, layer = "counts"),  :
+  Some features contain 0 total counts
+Running SVD
+Scaling cell embeddings
+An object of class Seurat 
+151923 features across 9002 samples within 1 assay 
+Active assay: peaks (151923 features, 151923 variable features)
+ 2 layers present: counts, data
+ 1 dimensional reduction calculated: lsi
+Warning messages:
+1: In grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y,  :
+  font width unknown for character 0x09 in encoding latin1
+2: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  font width unknown for character 0x09 in encoding latin1
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+15:49:42 UMAP embedding parameters a = 0.9922 b = 1.112
+15:49:42 Read 9002 rows and found 29 numeric columns
+15:49:42 Using Annoy for neighbor search, n_neighbors = 30
+15:49:43 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:49:44 Writing NN index file to temp file /tmp/Rtmp4YmyX5/file2f73d949f31976
+15:49:44 Searching Annoy index using 1 thread, search_k = 3000
+15:49:46 Annoy recall = 100%
+15:49:47 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+15:49:49 Initializing from normalized Laplacian + noise (using RSpectra)
+15:49:51 Commencing optimization for 500 epochs, with 359984 positive edges
+15:49:51 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:50:04 Optimization finished
+Computing nearest neighbor graph
+Computing SNN
+Transposing data matrix
+Initializing state using k-means centroids initialization
+Harmony 1/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 2/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 3/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 4/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 5/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 6/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 7/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 8/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony converged after 8 iterations
+15:50:25 UMAP embedding parameters a = 0.9922 b = 1.112
+15:50:25 Read 9002 rows and found 29 numeric columns
+15:50:25 Using Annoy for neighbor search, n_neighbors = 30
+15:50:25 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:50:26 Writing NN index file to temp file /tmp/Rtmp4YmyX5/file2f73d974860cf1
+15:50:26 Searching Annoy index using 1 thread, search_k = 3000
+15:50:28 Annoy recall = 100%
+15:50:29 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+15:50:31 Found 3 connected components, falling back to 'spca' initialization with init_sdev = 1
+15:50:31 Using 'irlba' for PCA
+15:50:31 PCA: 2 components explained 19.89% variance
+15:50:31 Scaling init to sdev = 1
+15:50:31 Commencing optimization for 500 epochs, with 391846 positive edges
+15:50:31 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:50:46 Optimization finished
+Extracting gene coordinates
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+Extracting reads overlapping genomic regions
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+There were 29 warnings (use warnings() to see them)
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Warning messages:
+1: The `slot` argument of `SetAssayData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+2: The `slot` argument of `GetAssayData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:Biostrings’:
+
+    collapse, intersect, setdiff, setequal, union
+
+The following object is masked from ‘package:XVector’:
+
+    slice
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, setequal, union
+
+The following object is masked from ‘package:generics’:
+
+    explain
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:XVector’:
+
+    compact
+
+The following object is masked from ‘package:hdf5r’:
+
+    flatten_df
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    reduce
+
+The following object is masked from ‘package:IRanges’:
+
+    reduce
+
+The following object is masked from ‘package:Signac’:
+
+    reduce
+
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following object is masked from ‘package:dplyr’:
+
+    count
+
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘SummarizedExperiment’
+
+The following object is masked from ‘package:Seurat’:
+
+    Assays
+
+The following object is masked from ‘package:SeuratObject’:
+
+    Assays
+
+Validating object structure
+Updating object slots
+Ensuring keys are in the proper structure
+Ensuring keys are in the proper structure
+Ensuring feature names don't have underscores or pipes
+Updating slots in RNA
+Validating object structure for Assay5 ‘RNA’
+Object representation is consistent with the most current Seurat version
+[1] ‘5.3.0’
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+
+Attaching package: ‘glmGamPoi’
+
+The following object is masked from ‘package:dplyr’:
+
+    vars
+
+The following object is masked from ‘package:ggplot2’:
+
+    vars
+
+[1] ‘0.3.1’
+[1] ‘1.0.0’
+[1] ‘1.20.0’
+[1] ‘1.15.0’
+Normalizing layer: counts
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Finding variable features for layer counts
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |===                                                                   |   4%  |                                                                              |======                                                                |   8%  |                                                                              |========                                                              |  12%  |                                                                              |===========                                                           |  16%  |                                                                              |==============                                                        |  20%  |                                                                              |=================                                                     |  24%  |                                                                              |====================                                                  |  28%  |                                                                              |======================                                                |  32%  |                                                                              |=========================                                             |  36%  |                                                                              |============================                                          |  40%  |                                                                              |===============================                                       |  44%  |                                                                              |==================================                                    |  48%  |                                                                              |====================================                                  |  52%  |                                                                              |=======================================                               |  56%  |                                                                              |==========================================                            |  60%  |                                                                              |=============================================                         |  64%  |                                                                              |================================================                      |  68%  |                                                                              |==================================================                    |  72%  |                                                                              |=====================================================                 |  76%  |                                                                              |========================================================              |  80%  |                                                                              |===========================================================           |  84%  |                                                                              |==============================================================        |  88%  |                                                                              |================================================================      |  92%  |                                                                              |===================================================================   |  96%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  ST18, DPYD, MBP, PLP1, RNF220, TMEM144, CTNNA3, ENPP2, MOBP, PIP4K2A 
+	   PLD1, TF, MAN2A1, CLDN11, SLC7A14-AS1, PLCL1, FAM107B, SLCO1A2, LINC01608, LPAR1 
+	   GLDN, PALM2AKAP2, HHIP, CERCAM, MYO1D, ANLN, CNP, PRUNE2, UGT8, CNDP1 
+Negative:  FAM155A, NRXN1, NRG3, PLCB1, NRCAM, GPM6A, SLC35F1, CTNNA2, SOX5, NEBL 
+	   SOX6, FGF14, PTPRZ1, RBMS3, RGS7, GRIK2, OPCML, SNTG1, CHL1, PARD3 
+	   NKAIN3, KCND2, THRB, GABRB1, PCDH7, FGF12, CSMD1, KCNMB2, DGKG, MAP2 
+PC_ 2 
+Positive:  SLC1A3, ARHGAP24, NEAT1, ARHGAP26, CARMIL1, GLIS3, BMPR1B, GPC5, NHSL1, OBI1-AS1 
+	   BMP2K, RYR3, TPD52L1, MERTK, APOE, AQP4, LINC00299, TRPM3, GJA1, RFX4 
+	   RANBP3L, STON2, RGS20, ATP1A2, ABR, SLCO1C1, GLI3, ACSS3, ZNF98, PAMR1 
+Negative:  NRXN3, SLC24A2, ROBO1, CNTNAP2, KAZN, PEX5L, CSMD1, TTLL7, MDGA2, GALNT13 
+	   PDE1C, OPCML, SH3GL3, ADARB2, SNTG1, CSMD3, FGF12, GRIK2, FGF14, KCNH8 
+	   DPP6, XKR4, RIMS2, KIRREL3, GRM5, ATRNL1, CNTNAP5, CNTNAP4, GRID2, DAB1 
+PC_ 3 
+Positive:  GPC5, RYR3, BMPR1B, TMTC2, OBI1-AS1, ERBB4, TPD52L1, LINC00299, AQP4, TRPM3 
+	   RFX4, SLC1A2, LRIG1, RANBP3L, RGS20, ZNF98, ATP1A2, GJA1, SLCO1C1, RORB 
+	   GLI3, PAMR1, SHROOM3, GNA14, DLC1, ZNRF3, ACSS3, COL5A3, LINC00499, ACSBG1 
+Negative:  DOCK8, APBB1IP, SLC8A1, ST6GAL1, FYB1, ADAM28, LRMDA, ATP8B4, ARHGAP15, FRMD4A 
+	   TBXAS1, SRGAP2, SLCO2B1, INPP5D, RUNX1, SRGAP2B, DENND3, MEF2C, DIAPH2, RNASET2 
+	   CSF1R, LNCAROD, SYK, PALD1, DOCK2, DISC1, TLR2, IPCEF1, RHBDF2, HS3ST4 
+PC_ 4 
+Positive:  CA10, VCAN, TNR, PTPRZ1, XYLT1, MEGF11, PDGFRA, LHFPL3, SMOC1, BRINP3 
+	   LUZP2, SEMA5A, MMP16, DSCAM, CHST11, LINC00511, PCDH15, STK32A, COL11A1, DGKG 
+	   LRRC4C, MYT1, FERMT1, MIR3681HG, CHST9, OPHN1, PLPP4, BCAN, DISC1, NTNG1 
+Negative:  CLDN5, ABCB1, COBLL1, ADGRL2, VWF, MECOM, ATP10A, ERG, ITGA1, ADGRL4 
+	   PTPRB, EGFL7, THSD4, ST8SIA6, PDE10A, ADGRF5, DCLK1, PODXL, MTUS2, LEF1 
+	   ROBO2, RUNDC3B, PIK3R3, ARHGAP29, GALNT18, IFI27, NOSTRIN, SLCO4A1, ANO2, ZNF385B 
+PC_ 5 
+Positive:  CLDN5, ABCB1, VWF, MECOM, ANO2, ATP10A, ERG, EPAS1, COBLL1, PODXL 
+	   NOSTRIN, ADGRF5, ADGRL4, IFI27, LEF1, EGFL7, ST8SIA6, PDZD2, CAVIN2, TEK 
+	   SLC1A1, ZFPM2, SLCO4A1, CA10, THSD4, CDH5, SYNE2, KLF2, SLC2A1, PALMD 
+Negative:  TENM2, ROBO2, FRMPD4, KCNC2, CHRM3, MGAT4C, SYNPR, CACNA1B, MTUS2, GRIP1 
+	   EPHA6, HCN1, FRMD4A, TENM3, CDH9, FSTL5, GABRG3, CNTNAP2, GABRB2, DLGAP2 
+	   KCNQ5, SYT1, GABBR2, GALNTL6, SNHG14, PCLO, CELF4, KCNQ3, LINGO2, ELAVL2 
+Running CCA
+Merging objects
+Finding neighborhoods
+Finding anchors
+	Found 27557 anchors
+Finding integration vectors
+Finding integration vector weights
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Predicting cell labels
+Warning messages:
+1: ggrepel: 10 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+2: ggrepel: 7 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning message:
+ggrepel: 9 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning message:
+ggrepel: 2 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning messages:
+1: ggrepel: 11 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+2: ggrepel: 7 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+Warning messages:
+1: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+2: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+Warning messages:
+1: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+2: Groups with fewer than two datapoints have been dropped.
+ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes. 
+Calculating cluster Oligo
+Calculating cluster Micro
+Calculating cluster Astro
+Calculating cluster SOM
+Calculating cluster OPC
+Calculating cluster 5HT3aR
+Calculating cluster Endo
+[1] "chr14-28754171-28768670"  "chr14-68788559-68796532" 
+[3] "chr11-31809966-31818477"  "chr8-143950517-143957079"
+[5] "chr3-64684700-64689108"   "chr10-43214382-43220088" 
+[1] "chr10-106570282-106572906" "chr6-12175536-12176292"   
+[3] "chr9-7688717-7689777"      "chr10-124529431-124530935"
+[5] "chr11-119973628-119985980" "chr16-47825632-47827180"  
+                         p_val avg_log2FC pct.1 pct.2 p_val_adj
+chr14-28754171-28768670      0   3.109187 0.808 0.111         0
+chr14-68788559-68796532      0   2.971984 0.785 0.111         0
+chr11-31809966-31818477      0   3.300942 0.750 0.095         0
+chr8-143950517-143957079     0   3.301900 0.692 0.083         0
+chr3-64684700-64689108       0   4.152701 0.644 0.039         0
+chr10-43214382-43220088      0   3.879160 0.633 0.049         0
+                                 p_val avg_log2FC pct.1 pct.2    p_val_adj
+chr22-29320499-29320968   4.287018e-14   4.576126 0.111 0.005 6.512966e-09
+chr3-56415613-56416137    1.683377e-10   3.776698 0.148 0.012 2.557436e-05
+chr14-66746251-66746724   2.738920e-10   4.014551 0.111 0.007 4.161049e-05
+chr9-17462821-17463275    1.883292e-09   3.869742 0.111 0.008 2.861154e-04
+chr10-126459371-126460637 3.385050e-09   3.497936 0.148 0.014 5.142669e-04
+chr17-72622985-72623729   4.622121e-09   3.775431 0.111 0.008 7.022065e-04
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+                          tx_id gene_name         gene_id   gene_biotype type
+ENST00000557086 ENST00000557086   ZFP36L1 ENSG00000185650 protein_coding  cds
+ENST00000313071 ENST00000313071     FOXG1 ENSG00000176165 protein_coding  cds
+ENST00000256495 ENST00000256495   BHLHE40 ENSG00000134107 protein_coding  cds
+ENST00000641252 ENST00000641252       MYC ENSG00000136997 protein_coding  cds
+ENST00000536537 ENST00000536537     CCND2 ENSG00000118971 protein_coding  cds
+ENST00000621961 ENST00000621961     PCDH7 ENSG00000169851 protein_coding  cds
+                          closest_region             query_region distance
+ENST00000557086  chr14-68796075-68796149  chr14-68788559-68796532        0
+ENST00000313071  chr14-28767280-28768749  chr14-28754171-28768670        0
+ENST00000256495     chr3-4980301-4980408     chr3-4976051-4980949        0
+ENST00000641252 chr8-127735473-127735817 chr8-127733747-127739552        0
+ENST00000536537    chr12-4276064-4276220    chr12-4268536-4277515        0
+ENST00000621961   chr4-30723480-30724596   chr4-30716021-30724631        0
+
+clusterProfiler v4.16.0 Learn more at https://yulab-smu.top/contribution-knowledge-mining/
+
+Please cite:
+
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang,
+W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize
+multiomics data. Nature Protocols. 2024, 19(11):3292-3320
+
+Attaching package: ‘clusterProfiler’
+
+The following object is masked from ‘package:purrr’:
+
+    simplify
+
+The following object is masked from ‘package:XVector’:
+
+    slice
+
+The following object is masked from ‘package:IRanges’:
+
+    slice
+
+The following object is masked from ‘package:S4Vectors’:
+
+    rename
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+Loading required package: AnnotationDbi
+
+Attaching package: ‘AnnotationDbi’
+
+The following object is masked from ‘package:clusterProfiler’:
+
+    select
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+
+enrichplot v1.28.4 Learn more at https://yulab-smu.top/contribution-knowledge-mining/
+
+Please cite:
+
+Guangchuang Yu, Fei Li, Yide Qin, Xiaochen Bo, Yibo Wu and Shengqi
+Wang. GOSemSim: an R package for measuring semantic similarity among GO
+terms and gene products. Bioinformatics. 2010, 26(7):976-978
+Warning message:
+In fortify(object, showCategory = showCategory, by = x, ...) :
+  Arguments in `...` must be used.
+✖ Problematic argument:
+• by = x
+ℹ Did you misspell an argument name?
+                          tx_id gene_name         gene_id   gene_biotype type
+ENST00000313071 ENST00000313071     FOXG1 ENSG00000176165 protein_coding  cds
+ENST00000557086 ENST00000557086   ZFP36L1 ENSG00000185650 protein_coding  cds
+ENST00000640242 ENST00000640242      PAX6 ENSG00000007372 protein_coding  cds
+ENST00000354958 ENST00000354958      PLEC ENSG00000178209 protein_coding  cds
+ENST00000498707 ENST00000498707   ADAMTS9 ENSG00000163638 protein_coding  cds
+ENST00000395810 ENST00000395810  RASGEF1A ENSG00000198915 protein_coding  gap
+                          closest_region             query_region distance
+ENST00000313071  chr14-28767280-28768749  chr14-28754171-28768670        0
+ENST00000557086  chr14-68796075-68796149  chr14-68788559-68796532        0
+ENST00000640242  chr11-31810828-31810840  chr11-31809966-31818477        0
+ENST00000354958 chr8-143953726-143953771 chr8-143950517-143957079        0
+ENST00000498707   chr3-64687543-64687657   chr3-64684700-64689108        0
+ENST00000395810  chr10-43206123-43266844  chr10-43214382-43220088        0
+Warning message:
+In fortify(object, showCategory = showCategory, by = x, ...) :
+  Arguments in `...` must be used.
+✖ Problematic argument:
+• by = x
+ℹ Did you misspell an argument name?
+Warning message:
+In fortify(object, showCategory = showCategory, by = x, ...) :
+  Arguments in `...` must be used.
+✖ Problematic argument:
+• by = x
+ℹ Did you misspell an argument name?
+GRanges object with 170735 ranges and 0 metadata columns:
+           seqnames              ranges strand
+              <Rle>           <IRanges>  <Rle>
+       [1]    chr14   68788559-68796532      *
+       [2]    chr14   28754171-28768670      *
+       [3]     chr3     4976051-4980949      *
+       [4]     chr8 127733747-127739552      *
+       [5]    chr12     4268536-4277515      *
+       ...      ...                 ...    ...
+  [170731]     chr7   20510288-20510838      *
+  [170732]     chr7 139591469-139591949      *
+  [170733]    chr10 100184899-100187193      *
+  [170734]     chr6   38638696-38641067      *
+  [170735]     chr4 153749967-153750652      *
+  -------
+  seqinfo: 24 sequences from an unspecified genome; no seqlengths
+Creating pseudobulk profiles for 7 variables across 151923 features
+Computing euclidean distance between pseudobulk profiles
+Clustering distance matrix
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_301_snATAC-C3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_304_snATAC-C5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_306_snATAC-C6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_308_snATAC-C8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_317_snATAC-C10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_318_snATAC-C11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_322_snATAC-D1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_323_snATAC-D2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_325_snATAC-D4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191114_PN_328_snATAC-D5/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_110_snATAC-H7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_112_snATAC-H9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_114_snATAC-H10/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_115_snATAC-H11/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_116_snATAC-H12/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_117_snATAC-A1/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_118_snATAC-A2/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_120_snATAC-A3/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_122_snATAC-A4/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_126_snATAC-A6/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_127_snATAC-A7/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_128_snATAC-A8/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_129_snATAC-A9/fragments.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: /panfs/accrepfs.vampire/data/l3_varc/Data/snATAC+RNAseq/2021_MIT_D001_snATAC-seq_PFC-MCX_ALS-FTD-PN/191112_191114_ALS_FTLD_PN_MCX_snATAC/cellranger_out/191112_ALS_130_snATAC-A10/fragments.tsv.gz.tbi
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the Signac package.
+  Please report the issue at <https://github.com/stuart-lab/signac/issues>. 
+Warning message:
+Removed 21 rows containing missing values or values outside the scale range
+(`geom_segment()`). 
+Warning message:
+Removed 21 rows containing missing values or values outside the scale range
+(`geom_segment()`). 
+R version 4.5.0 (2025-04-11)
+Platform: x86_64-pc-linux-gnu
+Running under: Rocky Linux 9.5 (Blue Onyx)
+
+Matrix products: default
+BLAS/LAPACK: FlexiBLAS IMKL;  LAPACK version 3.11.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: America/Chicago
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] enrichplot_1.28.4           org.Hs.eg.db_3.21.0        
+ [3] AnnotationDbi_1.70.0        clusterProfiler_4.16.0     
+ [5] tidyr_1.3.1                 glmGamPoi_1.20.0           
+ [7] presto_1.0.0                data.table_1.17.8          
+ [9] BPCells_0.3.1               SummarizedExperiment_1.38.1
+[11] Biobase_2.68.0              MatrixGenerics_1.20.0      
+[13] matrixStats_1.5.0           purrr_1.1.0                
+[15] dplyr_1.1.4                 future_1.67.0              
+[17] Rsamtools_2.24.1            Biostrings_2.76.0          
+[19] XVector_0.48.0              hdf5r_1.3.12               
+[21] harmony_1.2.3               Rcpp_1.1.0                 
+[23] patchwork_1.3.2             ggplot2_4.0.0              
+[25] GenomicRanges_1.60.0        GenomeInfoDb_1.44.3        
+[27] IRanges_2.42.0              S4Vectors_0.46.0           
+[29] BiocGenerics_0.54.0         generics_0.1.4             
+[31] Seurat_5.3.0                SeuratObject_5.2.0         
+[33] sp_2.2-0                    Signac_1.15.0              
+
+loaded via a namespace (and not attached):
+  [1] RcppAnnoy_0.0.22        splines_4.5.0           later_1.4.4            
+  [4] ggplotify_0.1.3         bitops_1.0-9            R.oo_1.27.1            
+  [7] tibble_3.3.0            polyclip_1.10-7         fastDummies_1.7.5      
+ [10] lifecycle_1.0.4         globals_0.18.0          lattice_0.22-6         
+ [13] MASS_7.3-65             magrittr_2.0.4          plotly_4.11.0          
+ [16] ggtangle_0.0.7          httpuv_1.6.16           sctransform_0.4.2      
+ [19] spam_2.11-1             spatstat.sparse_3.1-0   reticulate_1.43.0      
+ [22] cowplot_1.2.0           pbapply_1.7-4           DBI_1.2.3              
+ [25] RColorBrewer_1.1-3      abind_1.4-8             Rtsne_0.17             
+ [28] R.utils_2.13.0          yulab.utils_0.2.1       rappdirs_0.3.3         
+ [31] GenomeInfoDbData_1.2.14 ggrepel_0.9.6           irlba_2.3.5.1          
+ [34] listenv_0.9.1           spatstat.utils_3.2-0    tidytree_0.4.6         
+ [37] goftest_1.2-3           RSpectra_0.16-2         spatstat.random_3.4-2  
+ [40] fitdistrplus_1.2-4      parallelly_1.45.1       codetools_0.2-20       
+ [43] DelayedArray_0.34.1     RcppRoll_0.3.1          DOSE_4.2.0             
+ [46] tidyselect_1.2.1        aplot_0.2.9             UCSC.utils_1.4.0       
+ [49] farver_2.1.2            spatstat.explore_3.5-3  jsonlite_2.0.0         
+ [52] progressr_0.16.0        ggridges_0.5.7          survival_3.8-3         
+ [55] systemfonts_1.3.1       tools_4.5.0             treeio_1.32.0          
+ [58] ragg_1.5.0              ica_1.0-3               glue_1.8.0             
+ [61] gridExtra_2.3           SparseArray_1.8.1       qvalue_2.40.0          
+ [64] withr_3.0.2             fastmap_1.2.0           digest_0.6.37          
+ [67] gridGraphics_0.5-1      R6_2.6.1                mime_0.13              
+ [70] textshaping_1.0.3       scattermore_1.2         GO.db_3.21.0           
+ [73] tensor_1.5.1            dichromat_2.0-0.1       spatstat.data_3.1-8    
+ [76] RSQLite_2.4.3           R.methodsS3_1.8.2       RhpcBLASctl_0.23-42    
+ [79] httr_1.4.7              htmlwidgets_1.6.4       S4Arrays_1.8.1         
+ [82] uwot_0.2.3              pkgconfig_2.0.3         gtable_0.3.6           
+ [85] blob_1.2.4              lmtest_0.9-40           S7_0.2.0               
+ [88] htmltools_0.5.8.1       fgsea_1.34.2            dotCall64_1.2          
+ [91] scales_1.4.0            png_0.1-8               spatstat.univar_3.1-4  
+ [94] ggfun_0.2.0             reshape2_1.4.4          nlme_3.1-168           
+ [97] zoo_1.8-14              cachem_1.1.0            stringr_1.5.2          
+[100] KernSmooth_2.23-26      parallel_4.5.0          miniUI_0.1.2           
+[103] pillar_1.11.1           grid_4.5.0              vctrs_0.6.5            
+[106] RANN_2.6.2              promises_1.3.3          beachmat_2.24.0        
+[109] xtable_1.8-4            cluster_2.1.8.1         cli_3.6.5              
+[112] compiler_4.5.0          rlang_1.1.6             crayon_1.5.3           
+[115] future.apply_1.20.0     labeling_0.4.3          fs_1.6.6               
+[118] plyr_1.8.9              stringi_1.8.7           viridisLite_0.4.2      
+[121] deldir_2.0-4            BiocParallel_1.42.2     lazyeval_0.2.2         
+[124] spatstat.geom_3.6-0     GOSemSim_2.34.0         Matrix_1.7-3           
+[127] RcppHNSW_0.6.0          bit64_4.6.0-1           KEGGREST_1.48.1        
+[130] shiny_1.11.1            ROCR_1.0-11             igraph_2.1.4           
+[133] memoise_2.0.1           ggtree_3.16.3           fastmatch_1.1-6        
+[136] bit_4.6.0               gson_0.1.0              ape_5.8-1              
